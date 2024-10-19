@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.12.5 on win32)" generated="2024-10-19T23:05:14.040185" rpa="false" schemaversion="5">
+<suite id="s1" name="TestSignup" source="D:\VS Code\tests\TestSignup.robot">
+<test id="s1-t1" name="Test User Signup Process" line="14">
+<kw name="Open Signup Page" owner="SignupPage">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-19T23:05:14.276679" level="INFO">Opening browser 'chrome' to base url 'https://futureskill.co'.</msg>
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-19T23:05:14.275681" elapsed="2.089599"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-19T23:05:16.365280" elapsed="0.062303"/>
+</kw>
+<arg>${URL}</arg>
+<status status="PASS" start="2024-10-19T23:05:14.274680" elapsed="2.152903"/>
+</kw>
+<kw name="Fill Signup Form" owner="SignupPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>name=email</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-19T23:05:16.428590" elapsed="2.793222"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T23:05:19.222813" level="INFO">Typing text 'testuser@example.com' into text field 'name=email'.</msg>
+<arg>name=email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T23:05:19.222813" elapsed="0.237999"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T23:05:19.460812" level="INFO">Typing text 'ชื่อทดสอบ' into text field 'xpath=//input[@placeholder='ชื่อ']'.</msg>
+<arg>xpath=//input[@placeholder='ชื่อ']</arg>
+<arg>${first_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T23:05:19.460812" elapsed="0.081009"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T23:05:19.541821" level="INFO">Typing text 'นามสกุลทดสอบ' into text field 'xpath=//input[@placeholder='นามสกุล']'.</msg>
+<arg>xpath=//input[@placeholder='นามสกุล']</arg>
+<arg>${last_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T23:05:19.541821" elapsed="0.126000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T23:05:19.667821" level="INFO">Typing text '0812345678' into text field 'xpath=//input[@placeholder='เบอร์โทรศัพท์']'.</msg>
+<arg>xpath=//input[@placeholder='เบอร์โทรศัพท์']</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T23:05:19.667821" elapsed="0.095769"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T23:05:19.763590" level="INFO">Typing text 'Test1234' into text field 'xpath=//input[@placeholder='รหัสผ่าน']'.</msg>
+<arg>xpath=//input[@placeholder='รหัสผ่าน']</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T23:05:19.763590" elapsed="0.076000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T23:05:19.839590" level="INFO">Typing text 'Test1234' into text field 'xpath=//input[@placeholder='ยืนยันรหัสผ่าน']'.</msg>
+<arg>xpath=//input[@placeholder='ยืนยันรหัสผ่าน']</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T23:05:19.839590" elapsed="0.078002"/>
+</kw>
+<arg>${EMAIL}</arg>
+<arg>${FIRST_NAME}</arg>
+<arg>${LAST_NAME}</arg>
+<arg>${PHONE}</arg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2024-10-19T23:05:16.428590" elapsed="3.489002"/>
+</kw>
+<kw name="Submit Signup" owner="SignupPage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-19T23:05:19.918590" level="INFO">Clicking element 'xpath=//button[contains(text(), "สมัครสมาชิก")]'.</msg>
+<arg>${SIGNUP_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T23:05:19.918590" elapsed="0.085000"/>
+</kw>
+<status status="PASS" start="2024-10-19T23:05:19.918590" elapsed="0.085000"/>
+</kw>
+<kw name="Wait For OTP Page" owner="OTPPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2024-10-19T23:05:40.254355" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-10-19T23:05:40.254355" level="FAIL">Element 'xpath=//input[@name='otp']' not visible after 20 seconds.</msg>
+<arg>${OTP_FIELD}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-10-19T23:05:20.004589" elapsed="20.250765">Element 'xpath=//input[@name='otp']' not visible after 20 seconds.</status>
+</kw>
+<status status="FAIL" start="2024-10-19T23:05:20.003590" elapsed="20.252763">Element 'xpath=//input[@name='otp']' not visible after 20 seconds.</status>
+</kw>
+<kw name="Verify OTP Message" owner="OTPPage">
+<status status="NOT RUN" start="2024-10-19T23:05:40.256353" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>หน้ากรอก OTP ขึ้นและแสดงข้อความ OTP ถูกต้อง</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-10-19T23:05:40.256353" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-19T23:05:40.256353" elapsed="2.147680"/>
+</kw>
+<status status="FAIL" start="2024-10-19T23:05:14.273681" elapsed="28.130874">Element 'xpath=//input[@name='otp']' not visible after 20 seconds.</status>
+</test>
+<status status="FAIL" start="2024-10-19T23:05:14.042187" elapsed="28.362731"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="TestSignup">TestSignup</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
